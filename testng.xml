@@ -3,6 +3,7 @@
 <suite name="Test Selenium" parallel="methods" thread-count="4">
     <test name="Demo Test">
         <classes>
+            <class name="pom.tests.douglas.LoginToAccountTest"/>
         </classes>
     </test>
 </suite>
