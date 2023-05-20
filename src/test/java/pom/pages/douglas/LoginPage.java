@@ -22,7 +22,17 @@ public class LoginPage {
                 password
         );
     }
+    public static String readEmail() {
+        return Common.getTextFromElement(Locators.Douglas.Login.inputEmail);
+    }
+
+    public static String readPassword() {
+        return Common.getTextFromElement(Locators.Douglas.Login.inputPassword);
+    }
+
     public static void clickOnButtonSubmit() {
         Common.clickOnElement(Locators.Douglas.Login.buttonSubmit);
     }
+
+
 }

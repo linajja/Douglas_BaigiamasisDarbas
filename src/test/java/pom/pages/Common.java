@@ -57,6 +57,9 @@ public class Common {
         }
         return false;
     }
+    public static String getTextFromElement(By locator) {
+        return getElement(locator).getText();
+    }
     public static void sendKeysToElement(By locator, String sendKeys) {
         getElement(locator).sendKeys(sendKeys);
     }
