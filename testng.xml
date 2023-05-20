@@ -4,6 +4,7 @@
     <test name="Demo Test">
         <classes>
             <class name="pom.tests.douglas.LoginToAccountTest"/>
+            <class name="pom.tests.douglas.PutProductToCartTest"/>
         </classes>
     </test>
 </suite>

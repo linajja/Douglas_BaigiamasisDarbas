@@ -17,5 +17,24 @@ public class Locators {
             public static By inputPassword = By.xpath("//input[@id='login_password_input']");
             public static By buttonSubmit = By.xpath("//div[@id='popup_login']//button[@type='submit']");
         }
+
+        public static class Brand {
+            public static By buttonChooseChanelBrand = By.xpath("//img[@alt='CHANEL']");
+        }
+
+        public static class Chanel {
+            public static By buttonChooseChanelCocoMademoiselleIntense = By.xpath("//img[@alt='COCO MADEMOISELLE INTENSE']");
+        }
+
+        public static class ChanelCocoMademoiselleIntense {
+            public static By radioInputChoose50mlSize = By.xpath("//div[@class='items ']/div[2]");
+            public static By buttonAddToCart = By.xpath("//div[@class='col col-md-12']/button");
+            public static By iconOfCart = By.xpath("//a[@class='cart_icon menu_icon']");
+        }
+
+        public static class Cart {
+            public static By spanProductName = By.xpath("//span[@class='product_name']/a");
+            public static By spanProductSize = By.xpath("//div[@class='name']//span[@class='item_name']");
+        }
     }
 }
