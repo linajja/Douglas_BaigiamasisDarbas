@@ -11,4 +11,14 @@ public class CartPage {
     public static String readSizeOfProduct() {
         return Common.getTextFromElement(Locators.Douglas.Cart.spanProductSize);
     }
+    public static void clickOnSelectSampleButton() {
+        Common.sleep(1000);
+        Common.clickOnElement(Locators.Douglas.Cart.buttonChooseSample);
+        Common.sleep(1000);
+    }
+
+    public static String readNameOfSample() {
+        return Common.getTextFromElement(Locators.Douglas.Cart.spanSampleName);
+    }
+
 }

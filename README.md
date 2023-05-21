@@ -7,7 +7,7 @@
 ### Test cases
 ***
 <p style="color: green">
-1. Login to account: <br> douglas.lt
+1. Login to account with correct information: <br> douglas.lt
 
 ***
 
@@ -20,11 +20,27 @@
 - Put right password to login password input field;
 - Click "Prisijungti" button;
 
-___Expected result:___  Login is successful.
+___Expected result:___  Login is successful and login mark is appeared.
+***
+<p style="color: green">
+2. Login to account with false information: <br> douglas.lt
+
+***
+
+
+- Open www.douglas.lt page
+- Close "Slapukų informacija" window by clicking on "Sutinku su visai" button;
+- Click "Prisijungti" reference;
+- Wait till login page will be shown;
+- Put false email address to login email input field;
+- Put false password to login password input field;
+- Click "Prisijungti" button;
+
+___Expected result:___  Read input information and compare it with true information.
 
 ***
  <p style="color: green">
-2. Put product to the cart: <br> douglas.lt ->www.douglas.lt/prekiu-zenklai/ -> douglas.lt/chanel -> douglas.lt/katalogas/chanel-coco-mademoiselle-intense-2/
+3. Put product to the cart: <br> douglas.lt ->www.douglas.lt/prekiu-zenklai/ -> douglas.lt/chanel -> douglas.lt/katalogas/chanel-coco-mademoiselle-intense-2/
 
 ***
 </p>
@@ -43,14 +59,14 @@ ___Expected result:___ Selected product will be added to cart.
 
 ***
 <p style="color: green">
-3. Choosing the sample: <br> douglas.lt/mano-duomenys/prekiu-krepselis/
+4. Choosing the sample: <br> douglas.lt/mano-duomenys/prekiu-krepselis/
 
 ***
 </p>
 
 - Click "Rinktis" reference;
 - Wait till sample's page will be shown;
-- Check checkbox "Kūno odos priežiūros mėginys";
+- Check the checkbox;
 - Click "PRIDĖTI PAŽYMĖTUS MĖGINIUS" button;
 - Check if correct sample added to cart;
 
@@ -58,7 +74,7 @@ ___Expected result:___ Chosen sample should be added to cart.
 
 ***
 <p style="color: green">
-4. Add gift wrapping to cart : <br> douglas.lt/mano-duomenys/prekiu-krepselis/
+5. Add gift wrapping to cart : <br> douglas.lt/mano-duomenys/prekiu-krepselis/
 
 ***
 </p>
@@ -73,7 +89,7 @@ ___Expected result:___ Gift wrapping should be added to cart.
 
 ***
 <p style="color: green">
-5. Add greeting card to cart : <br> douglas.lt/mano-duomenys/prekiu-krepselis/
+6. Add greeting card to cart : <br> douglas.lt/mano-duomenys/prekiu-krepselis/
 
 ***
 </p>
@@ -88,7 +104,7 @@ ___Expected result___ Gift card should be added to cart.
 
 ***
 <p style="color: green">
-6. Checkout: <br> douglas.lt/mano-duomenys/prekiu-krepselis/ -> douglas.lt/mano-duomenys/prekiu-krepselis/checkout/ -> douglas.lt/mano-duomenys/uzsakymai/*****/atliktas/
+7. Checkout: <br> douglas.lt/mano-duomenys/prekiu-krepselis/ -> douglas.lt/mano-duomenys/prekiu-krepselis/checkout/ -> douglas.lt/mano-duomenys/uzsakymai/*****/atliktas/
 
 ***
 </p>

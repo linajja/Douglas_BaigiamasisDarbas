@@ -35,6 +35,15 @@ public class Locators {
         public static class Cart {
             public static By spanProductName = By.xpath("//span[@class='product_name']/a");
             public static By spanProductSize = By.xpath("//div[@class='name']//span[@class='item_name']");
+            public static By buttonChooseSample=By.xpath("//a[@class='sample-edit-link link-icon link-primary']");
+            public static By spanSampleName=By.xpath("//div[@class='item sample'][2]//span[@class='product_name']");
         }
+        public static class Samples {
+            public static By checkBoxChooseSample (String value) {
+                return By.xpath("//div[@class='samples-item']" + value);
+            };
+            public static By buttonSubmit=By.xpath("//div[@class='gift_samples_wrp active']//button[@type='submit']");
+        }
+
     }
 }
