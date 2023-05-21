@@ -7,6 +7,8 @@
             <class name="pom.tests.douglas.PutProductToCartTest"/>
             <class name="pom.tests.douglas.ChooseOfSampleTest"/>
             <class name="pom.tests.douglas.ChooseOfWrappingTest"/>
+            <class name="pom.tests.douglas.ChooseOfGiftCardTest"/>
+            <class name="pom.tests.douglas.CheckOutTest"/>
         </classes>
     </test>
 </suite>

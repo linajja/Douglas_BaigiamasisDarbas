@@ -39,4 +39,8 @@ public class CartPage {
     public static String readInfoThatRightCardTypeAddedToCard() {
         return Common.getTextFromElement(Locators.Douglas.Cart.spanGiftCardType);
     }
+
+    public static void clickOnContinueButton() {
+        Common.clickOnElement(Locators.Douglas.Cart.buttonContinue);
+    }
 }

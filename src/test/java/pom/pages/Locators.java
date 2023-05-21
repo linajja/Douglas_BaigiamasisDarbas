@@ -42,6 +42,7 @@ public class Locators {
             public static By buttonAddGiftCard=By.xpath("//div[@class='checkbox checkbox-cart-service checkbox-postcard-service']");
             public static By spanGiftCardAdded=By.xpath("//div[@class='item postcard']//span[@class='product_name']");
             public static By spanGiftCardType=By.xpath("//div[@class='item postcard']//span[@class='product_type']");
+            public static By buttonContinue=By.xpath("//a[@id='order_next_step']");
         }
         public static class Samples {
             public static By checkBoxChooseSample (String value) {
@@ -59,6 +60,15 @@ public class Locators {
             public static By buttonChooseCardType=By.xpath("//a[@class='right carousel-control']");
             public static By textareaGiftCardText=By.xpath("//div[@class='gift_postcard_wrp active']//textarea[@id='gift_card_text']");
             public static By buttonSubmit=By.xpath("//div[@class='gift_postcard_wrp active']//button[@type='submit']");
+        }
+
+        public static class Checkout {
+            public static By radioButtonDPD=By.xpath("//div[@class='radio']//label[@for='to_me2']");
+            public static By radioButtonPaymentInAdvance=By.xpath("//div[@class='payment_option']//label[@for='payment_option_prepayment']");
+            public static By paragraphPaymentInAdvanceMessage=By.xpath("//div[@id='prepayment_delivery']//p");
+            public static By labelAgreeWithRules=By.xpath("//label[@for='rules_agree_checkbox']");
+            public static By buttonOrder=By.xpath("//button[@id='cart_confirm_button']");
+            public static By messageMissingInfo=By.xpath("//div[@class='error_message alert alert-danger']");
         }
     }
 }

@@ -5,7 +5,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import pom.pages.Common;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,14 +15,12 @@ import java.time.format.DateTimeFormatter;
 public class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
-            takeScreenshot();
-        }
-
+        takeScreenshot();
+    }
 
     private void takeScreenshot() {
         TakesScreenshot takesScreenshot = (TakesScreenshot) Driver.getDriver();
         File screenshotFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
-
 
         String dir = "./screenshots/";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HH_mm_SSS");

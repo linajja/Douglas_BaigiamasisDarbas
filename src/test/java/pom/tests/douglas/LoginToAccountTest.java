@@ -32,15 +32,14 @@ public class LoginToAccountTest extends TestBase {
     }
 
     @Test(dataProvider = "LoginWithTrueInfo")
-    public void testLoginToAccountWithTrueInfo(String messageEmail, String messagePassword) {
+    public void testLoginToAccountWithTrueInfo(String email, String password) {
         String actualResult;
         String expectedResult = "logged_in";
 
         HomePage.clickOnLoginToAccount();
         LoginPage.waitTillLoginPageWillBeShown();
-        LoginPage.enterEmail(messageEmail);
-        LoginPage.enterPassword(messagePassword);
-
+        LoginPage.enterEmail(email);
+        LoginPage.enterPassword(password);
         LoginPage.clickOnButtonSubmit();
         actualResult = HomePage.checkIfLoginImageIsDisplayed("class");
 
@@ -48,7 +47,7 @@ public class LoginToAccountTest extends TestBase {
     }
 
     @Test(dataProvider = "LoginWithFalseInfo")
-    public void testLoginToAccountWithFalseInfo(String messageEmail, String expectedEmail, String messagePassword,
+    public void testLoginToAccountWithFalseInfo(String email, String expectedEmail, String password,
                                                 String expectedPassword) {
 
         String actualEmail;
@@ -56,8 +55,8 @@ public class LoginToAccountTest extends TestBase {
 
         HomePage.clickOnLoginToAccount();
         LoginPage.waitTillLoginPageWillBeShown();
-        LoginPage.enterEmail(messageEmail);
-        LoginPage.enterPassword(messagePassword);
+        LoginPage.enterEmail(email);
+        LoginPage.enterPassword(password);
 
         actualEmail = LoginPage.readEmail();
         actualPassword = LoginPage.readPassword();

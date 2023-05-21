@@ -32,6 +32,7 @@ public class LoginPage {
 
     public static void clickOnButtonSubmit() {
         Common.clickOnElement(Locators.Douglas.Login.buttonSubmit);
+        Common.sleep(1000);
     }
 
 

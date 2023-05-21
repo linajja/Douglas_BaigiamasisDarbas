@@ -104,22 +104,20 @@ ___Expected result___ Gift card should be added to cart.
 
 ***
 <p style="color: green">
-7. Checkout: <br> douglas.lt/mano-duomenys/prekiu-krepselis/ -> douglas.lt/mano-duomenys/prekiu-krepselis/checkout/ -> douglas.lt/mano-duomenys/uzsakymai/*****/atliktas/
+7. Checkout: <br> douglas.lt/mano-duomenys/prekiu-krepselis/ -> douglas.lt/mano-duomenys/prekiu-krepselis/checkout/ 
 
 ***
 </p>
 
 - Click "TĘSTI" button;
-- Click radio button "DOUGLAS parduotuvėje";
-- Click on field "Parduotuvė";
-- Choose teh shop and click on it;
+- Click radio button "DPD kurjeris";
 - Click radio button "Išankstiniu pavedimu";
 - Read the message "Šį mokėjimo būdą rinkitės tuo atveju, jeigu norite apmokėti paprastu bankiniu pavedimu."
 - Check the agreement with the rules checkbox "Patvirtinu, kad susipažinau ir sutinku su taisyklėmis";
 - Click "UŽSAKYTI" button;
-- Read the message "Sveikiname sėkmingai apsipirkus!";
+- Read the alert message "Pasirinkite pristatymo laiką.";
 
-___Expected result:___ Order accepted.
+___Expected result:___ Missing info to finish the order.
 
 ***
 <p style="color: green">
