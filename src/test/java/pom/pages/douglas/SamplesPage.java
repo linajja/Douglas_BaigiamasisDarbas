@@ -9,7 +9,6 @@ public class SamplesPage {
         Common.clickOnElement(Locators.Douglas.Samples.checkBoxChooseSample(sampleNo));
     }
 
-
     public static void clickOnSubmitButton() {
         Common.clickOnElement(Locators.Douglas.Samples.buttonSubmit);
     }

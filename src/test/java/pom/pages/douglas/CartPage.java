@@ -20,5 +20,12 @@ public class CartPage {
     public static String readNameOfSample() {
         return Common.getTextFromElement(Locators.Douglas.Cart.spanSampleName);
     }
+    public static void clickOnSelectFreeWrappingButton() {
+        Common.clickOnElement(Locators.Douglas.Cart.buttonAddWrapping);
+    }
 
+    public static String readInfoThatWrappingAddedToCart() {
+        Common.sleep(1000);
+        return Common.getTextFromElement(Locators.Douglas.Cart.spanWrapping);
+    }
 }

@@ -5,6 +5,8 @@
         <classes>
             <class name="pom.tests.douglas.LoginToAccountTest"/>
             <class name="pom.tests.douglas.PutProductToCartTest"/>
+            <class name="pom.tests.douglas.ChooseOfSampleTest"/>
+            <class name="pom.tests.douglas.ChooseOfWrappingTest"/>
         </classes>
     </test>
 </suite>
