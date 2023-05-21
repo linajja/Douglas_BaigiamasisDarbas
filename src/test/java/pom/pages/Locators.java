@@ -39,6 +39,9 @@ public class Locators {
             public static By spanSampleName=By.xpath("//div[@class='item sample'][2]//span[@class='product_name']");
             public static By buttonAddWrapping=By.xpath("//div[@class='checkbox checkbox-cart-service checkbox-packing-service']");
             public static By spanWrapping=By.xpath("//div[@class='item packing']//span[@class='product_name']");
+            public static By buttonAddGiftCard=By.xpath("//div[@class='checkbox checkbox-cart-service checkbox-postcard-service']");
+            public static By spanGiftCardAdded=By.xpath("//div[@class='item postcard']//span[@class='product_name']");
+            public static By spanGiftCardType=By.xpath("//div[@class='item postcard']//span[@class='product_type']");
         }
         public static class Samples {
             public static By checkBoxChooseSample (String value) {
@@ -51,6 +54,11 @@ public class Locators {
             public static By textareaPackingComment=By.xpath("//div[@class='group gift_pack_text']//textarea[@id='gift_pack_text']");
             public static By buttonSubmit=By.xpath("//div[@class='gift_packing_wrp active']//button[@type='submit']");
 
+        }
+        public static class GiftCard {
+            public static By buttonChooseCardType=By.xpath("//a[@class='right carousel-control']");
+            public static By textareaGiftCardText=By.xpath("//div[@class='gift_postcard_wrp active']//textarea[@id='gift_card_text']");
+            public static By buttonSubmit=By.xpath("//div[@class='gift_postcard_wrp active']//button[@type='submit']");
         }
     }
 }

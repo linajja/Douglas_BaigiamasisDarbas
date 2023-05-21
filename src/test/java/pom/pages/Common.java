@@ -5,7 +5,6 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pom.utils.Driver;
 
@@ -74,15 +73,11 @@ public class Common {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         return true;
     }
-
-    public static void clickOnElementWithActions(By locator) {
-        Actions actions = new Actions(Driver.getDriver());
-        actions
-                .moveToElement(getElement(locator))
-                .click()
-                .build()
-                .perform();
-
+    public static void clickOnElementFewTimes(Integer numberOfTimes) {
+        for (int i = 0; i < numberOfTimes; i++){
+            Common.getElement(Locators.Douglas.GiftCard.buttonChooseCardType).click();
+            Common.sleep(2000);
+        }
     }
 }
 

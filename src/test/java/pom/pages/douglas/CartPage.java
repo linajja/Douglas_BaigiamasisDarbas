@@ -28,4 +28,15 @@ public class CartPage {
         Common.sleep(1000);
         return Common.getTextFromElement(Locators.Douglas.Cart.spanWrapping);
     }
+    public static void clickOnSelectGiftCardButton() {
+        Common.clickOnElement(Locators.Douglas.Cart.buttonAddGiftCard);
+    }
+
+    public static String readInfoThatGiftCardAddedToCart() {
+        return Common.getTextFromElement(Locators.Douglas.Cart.spanGiftCardAdded);
+    }
+
+    public static String readInfoThatRightCardTypeAddedToCard() {
+        return Common.getTextFromElement(Locators.Douglas.Cart.spanGiftCardType);
+    }
 }
