@@ -17,25 +17,32 @@ public class PutProductToCartTest extends TestBase {
     }
 
     @Test
-    public void testAddProductToCart_ChanelCocoMademoiselleIntense50ml() {
+    public void testAddProductToCart_ChanelCocoMademoiselleIntense() {
 
-        String expectedResultOfProduct = "CHANEL COCO MADEMOISELLE INTENSE" + "50 ml";
-        String actualResultOfProduct;
-
+        String expectedResultOfProductName = "CHANEL COCO MADEMOISELLE INTENSE";
+        String actualResultOfProductName;
 
         ChanelPage.clickOnChanelCocoMademoiselleIntense();
         ChanelCocoMademoiselleIntensePage.clickOnRadioButton50ml();
         ChanelCocoMademoiselleIntensePage.clickOnButtonAddToCart();
         ChanelCocoMademoiselleIntensePage.clickOnCartIcon();
-        actualResultOfProduct = CartPage.readNameOfProduct() + CartPage.readSizeOfProduct();
+        actualResultOfProductName = CartPage.readNameOfProduct();
 
+        Assert.assertEquals(actualResultOfProductName, expectedResultOfProductName);
 
-        Assert.assertTrue(actualResultOfProduct.contains(expectedResultOfProduct),
-                String.format(
-                        "Actual: %s, Expected: %s",
-                        actualResultOfProduct,
-                        expectedResultOfProduct
-                )
-        );
+    }
+    @Test
+    public void testAddProductToCart_50ml() {
+
+        String expectedResultOfProductSize = "50 ml";
+        String actualResultOfProductSize;
+
+        ChanelPage.clickOnChanelCocoMademoiselleIntense();
+        ChanelCocoMademoiselleIntensePage.clickOnRadioButton50ml();
+        ChanelCocoMademoiselleIntensePage.clickOnButtonAddToCart();
+        ChanelCocoMademoiselleIntensePage.clickOnCartIcon();
+        actualResultOfProductSize = CartPage.readSizeOfProduct();
+
+        Assert.assertEquals(actualResultOfProductSize, expectedResultOfProductSize);
     }
 }

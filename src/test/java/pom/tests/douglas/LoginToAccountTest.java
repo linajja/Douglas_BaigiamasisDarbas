@@ -19,15 +19,15 @@ public class LoginToAccountTest extends TestBase {
     public Object[][] dataProviderTrueEmailPassword() {
         return new Object[][]{
                 {"lina.benetiene@gmail.com", "nezinau123"},
-                {"edvinas.benetis@gmail.com", "douglas321"},
+                {"edvinas.benetis@gmail.com", "douglas321"}
         };
     }
 
     @DataProvider(name = "LoginWithFalseInfo")
     public Object[][] dataProviderFalseEmailPassword() {
         return new Object[][]{
-                {"linabenetiene@gmail.com", "nezinau123"},
-                {"edvinas.benetis@gmail.com", "nezinau123"},
+                {"linabenetiene@gmail.com", "lina@benetiene@gmail.com", "nezinau123", "nezinau123"},
+                {"edvinas@benetis@gmail.com", "edvinas@benetis@gmail.com", "nezinau123", "douglas321"}
         };
     }
 
@@ -48,19 +48,28 @@ public class LoginToAccountTest extends TestBase {
     }
 
     @Test(dataProvider = "LoginWithFalseInfo")
-    public void testLoginToAccountWithFalseInfo(String messageEmail, String messagePassword) {
+    public void testLoginToAccountWithFalseInfo(String messageEmail, String expectedEmail, String messagePassword,
+                                                String expectedPassword) {
 
-        String actualResult;
-        String expectedResult = "lina.benetiene@gmail.com" + "nezinau123";
+        String actualEmail;
+        String actualPassword;
 
         HomePage.clickOnLoginToAccount();
         LoginPage.waitTillLoginPageWillBeShown();
         LoginPage.enterEmail(messageEmail);
         LoginPage.enterPassword(messagePassword);
 
-        actualResult = LoginPage.readEmail() + LoginPage.readPassword();
+        actualEmail = LoginPage.readEmail();
+        actualPassword = LoginPage.readPassword();
 
-        Assert.assertEquals(actualResult, expectedResult);
+        Assert.assertTrue(actualEmail.equals(expectedEmail) && actualPassword.equals(expectedPassword),
+                String.format(
+                        "ActualEmail: %s, ExpectedEmail: %s, ActualPassword: %s, ExpectedPassword: %s,",
+                        actualEmail,
+                        expectedEmail,
+                        actualPassword,
+                        expectedPassword
+                )
+        );
     }
-
 }
