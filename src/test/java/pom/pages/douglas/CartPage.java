@@ -12,9 +12,9 @@ public class CartPage {
         return Common.getTextFromElement(Locators.Douglas.Cart.spanProductSize);
     }
     public static void clickOnSelectSampleButton() {
-        Common.sleep(1000);
+        Common.waitForElement(Locators.Douglas.Cart.buttonChooseSample);
         Common.clickOnElement(Locators.Douglas.Cart.buttonChooseSample);
-        Common.sleep(1000);
+        Common.waitForElement(Locators.Douglas.Cart.buttonChooseSample);
     }
 
     public static String readNameOfSample() {
@@ -25,7 +25,7 @@ public class CartPage {
     }
 
     public static String readInfoThatWrappingAddedToCart() {
-        Common.sleep(1000);
+        Common.waitForElement(Locators.Douglas.Cart.spanWrapping);
         return Common.getTextFromElement(Locators.Douglas.Cart.spanWrapping);
     }
     public static void clickOnSelectGiftCardButton() {

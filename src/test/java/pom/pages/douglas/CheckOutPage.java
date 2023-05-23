@@ -12,7 +12,7 @@ public class CheckOutPage {
     }
 
     public static String readInfoOfPayInAdvance() {
-        Common.sleep(1000);
+        Common.waitForElement(Locators.Douglas.Checkout.paragraphPaymentInAdvanceMessage);
         return Common.getTextFromElement(Locators.Douglas.Checkout.paragraphPaymentInAdvanceMessage);
     }
 

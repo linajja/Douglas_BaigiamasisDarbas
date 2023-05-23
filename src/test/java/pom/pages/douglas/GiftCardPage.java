@@ -21,9 +21,10 @@ public class GiftCardPage {
     }
 
     public static void clickOnSubmitButton() {
-        Common.sleep(2000);
+        Common.waitForElement(Locators.Douglas.GiftCard.buttonSubmit);
         Common.clickOnElement(Locators.Douglas.GiftCard.buttonSubmit);
-        Common.sleep(2000);
+        Common.waitForElement(Locators.Douglas.GiftCard.buttonSubmit);
+
     }
 
 }

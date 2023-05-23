@@ -21,7 +21,7 @@ public class WrappingPage {
     }
 
     public static void clickOnSubmitButton() {
-        Common.sleep(1000);
+        Common.waitForElement(Locators.Douglas.Wrapping.buttonSubmit);
         Common.clickOnElement(Locators.Douglas.Wrapping.buttonSubmit);
     }
 }

@@ -36,7 +36,7 @@ ___Expected result:___  Login is successful and login mark is appeared.
 - Put false password to login password input field;
 - Click "Prisijungti" button;
 
-___Expected result:___  Read input information and compare it with true information.
+___Expected result:___  Read alert message and compare it with expected alert message.
 
 ***
  <p style="color: green">

@@ -10,7 +10,7 @@ public class ChanelCocoMademoiselleIntensePage {
     }
 
     public static void clickOnCartIcon() {
-        Common.sleep(1000);
+        Common.waitForElement(Locators.Douglas.ChanelCocoMademoiselleIntense.iconOfCart);
         Common.clickOnElement(Locators.Douglas.ChanelCocoMademoiselleIntense.iconOfCart);
     }
 

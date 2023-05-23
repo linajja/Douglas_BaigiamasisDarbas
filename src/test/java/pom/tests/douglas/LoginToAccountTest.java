@@ -26,8 +26,8 @@ public class LoginToAccountTest extends TestBase {
     @DataProvider(name = "LoginWithFalseInfo")
     public Object[][] dataProviderFalseEmailPassword() {
         return new Object[][]{
-                {"linabenetiene@gmail.com", "lina@benetiene@gmail.com", "nezinau123", "nezinau123"},
-                {"edvinas@benetis@gmail.com", "edvinas@benetis@gmail.com", "nezinau123", "douglas321"}
+                {"linabenetiene@gmail.com", "nezinau123"},
+                {"edvinas@benetis@gmail.com", "nezinau123"}
         };
     }
 
@@ -47,28 +47,19 @@ public class LoginToAccountTest extends TestBase {
     }
 
     @Test(dataProvider = "LoginWithFalseInfo")
-    public void testLoginToAccountWithFalseInfo(String email, String expectedEmail, String password,
-                                                String expectedPassword) {
+    public void testLoginToAccountWithFalseInfo(String email, String password) {
 
-        String actualEmail;
-        String actualPassword;
+        String expectedResult="Neteisingi prisijungimo duomenys.";
+        String actualResult;
 
         HomePage.clickOnLoginToAccount();
         LoginPage.waitTillLoginPageWillBeShown();
         LoginPage.enterEmail(email);
         LoginPage.enterPassword(password);
+        LoginPage.clickOnButtonSubmit();
 
-        actualEmail = LoginPage.readEmail();
-        actualPassword = LoginPage.readPassword();
+        actualResult = LoginPage.readAlertMessage();
 
-        Assert.assertTrue(actualEmail.equals(expectedEmail) && actualPassword.equals(expectedPassword),
-                String.format(
-                        "ActualEmail: %s, ExpectedEmail: %s, ActualPassword: %s, ExpectedPassword: %s,",
-                        actualEmail,
-                        expectedEmail,
-                        actualPassword,
-                        expectedPassword
-                )
-        );
+        Assert.assertTrue(actualResult.contains(expectedResult));
     }
 }

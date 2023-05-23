@@ -47,11 +47,21 @@ public class Common {
                 getElement(locator);
                 return true;
             } catch (NoSuchElementException e) {
-                sleep(500);
+                sleep(2000);
             }
         }
         return false;
     }
+
+    public static boolean waitForElement(By locator) {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 
     public static String getTextFromElement(By locator) {
         return getElement(locator).getText();

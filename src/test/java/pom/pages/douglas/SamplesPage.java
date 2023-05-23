@@ -1,6 +1,5 @@
 package pom.pages.douglas;
 
-import org.openqa.selenium.By;
 import pom.pages.Common;
 import pom.pages.Locators;
 

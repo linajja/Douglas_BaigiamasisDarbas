@@ -16,6 +16,7 @@ public class Locators {
             public static By inputEmail = By.xpath("//input[@id='login_email_input']");
             public static By inputPassword = By.xpath("//input[@id='login_password_input']");
             public static By buttonSubmit = By.xpath("//div[@id='popup_login']//button[@type='submit']");
+            public static By alertMessage=By.xpath("//div[@class='error_message alert alert-danger']");
         }
 
         public static class Brand {

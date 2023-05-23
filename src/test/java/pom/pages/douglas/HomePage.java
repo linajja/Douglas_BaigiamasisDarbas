@@ -26,6 +26,7 @@ public class HomePage {
         );
     }
     public static void clickOnBrandChoice() {
+        Common.waitForElement(Locators.Douglas.Home.buttonChoiceBrand);
         Common.clickOnElement(Locators.Douglas.Home.buttonChoiceBrand);
     }
 }
